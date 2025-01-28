@@ -1,0 +1,239 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Blue gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+    color: #333;
+    animation: fadeIn 1s ease-out; /* Fade-in effect on page load */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Container for the login form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 40px 40px;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    box-sizing: border-box;
+    animation: popUp 0.6s ease-out; /* Pop-up effect on load */
+}
+
+/* Animation for login box popping up */
+@keyframes popUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #2C3E50;
+    font-weight: 500;
+    animation: slideIn 0.6s ease-out; /* Title slide-in animation */
+}
+
+/* Animation for sliding the title */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Input Fields Styling */
+.input-group {
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: black; /* Change color to black */
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold; /* Make the label text bold */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #BDC3C7;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #34495E;
+    background-color: #f4f6f9;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animation when input field is focused (border expansion) */
+.input-group input:focus {
+    border-color: #3498DB;
+    outline: none;
+    background-color: #fff;
+    animation: borderExpand 0.3s ease-in-out; /* Border expand on focus */
+}
+
+/* Animation for border expansion on focus */
+@keyframes borderExpand {
+    0% {
+        border-width: 1px;
+    }
+    100% {
+        border-width: 2px;
+    }
+}
+
+/* Placeholder styling */
+.input-group input::placeholder {
+    color: #BDC3C7;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover animation for buttons */
+.btn:hover {
+    background-color: #2980B9;
+    transform: scale(1.05); /* Slight grow effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow on hover */
+    animation: btnHover 0.3s ease-out; /* Button hover animation */
+}
+
+/* Animation for button hover */
+@keyframes btnHover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.btn:active {
+    background-color: #1F618D;
+    transform: scale(1.02);
+}
+
+/* Links Styling */
+.links {
+    margin-top: 25px;
+}
+
+.links a {
+    color: #3498DB;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Hover animation for links */
+.links a:hover {
+    color: #2980B9;
+    text-decoration: underline;
+    animation: linkHover 0.3s ease-out; /* Link hover animation */
+}
+
+/* Animation for link hover */
+@keyframes linkHover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #E74C3C;
+    font-size: 14px;
+    margin-top: 15px;
+    display: none;
+    text-align: center;
+    animation: slideDown 0.5s ease-out; /* Slide down effect for error messages */
+}
+
+/* Slide-down animation for error message */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .login-box {
+        padding: 30px 25px;
+        max-width: 90%;
+    }
+
+    .login-box h2 {
+        font-size: 24px;
+    }
+
+    .input-group input,
+    .btn {
+        font-size: 15px;
+    }
+}
+
